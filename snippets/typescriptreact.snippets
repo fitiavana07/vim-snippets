@@ -1,1 +1,15 @@
 extends typescript
+
+# Functional Component
+snippet fc
+	import React from 'react'
+
+	const ${1:ComponentName}: React.FC = () => {
+		return (
+			<${2:rootComponent}>
+				${3}
+			</${2}>
+		)
+	}
+
+	export default ${1}
