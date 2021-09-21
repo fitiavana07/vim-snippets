@@ -284,7 +284,7 @@ snippet us
 snippet timeout
 	setTimeout(function () {${0}}${2}, ${1:10});
 snippet const
-	const ${1} = ${0};
+	const ${1} = ${0}
 snippet constn
 	const ${1} = new ${0};
 snippet let
@@ -357,3 +357,41 @@ snippet as "async"
 	async ${0}
 snippet aw "await"
 	await ${0:${VISUAL}}
+
+snippet use "use hook"
+	const ${1:[]} = use${2:Hook}(${3})
+
+snippet cgqlq "const gql query"
+	const GET_${1:GET_THINGS} = gql\`
+		query Get${2:Things} {
+			${3:things} {
+				id
+				${4:name}
+			}
+		}
+	\`
+
+snippet cgqlqv "const gql query with variables"
+	const GET_${1:GET_THINGS} = gql\`
+	  query Get${2:Thing}(
+	    \$${3:id}: ${4:ID!}
+	  ) {
+	    ${5:thing}(
+	      ${3}: \$$3
+	    ) {
+	      id
+	      ${6:name}
+	    }
+	  }
+	\`
+
+
+snippet cgqlm "const gql mutation"
+	const ${1:GET_THINGS} = gql\`
+		mutation ${2:Things} {
+			${3:things} {
+				id
+				${4:name}
+			}
+		}
+	\`

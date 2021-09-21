@@ -65,5 +65,20 @@ snippet tclax "ts class extends"
 		}
 		${0}
 	}
+
 snippet edf "export { default } from "
 	export { default } from '${1}'
+
+snippet edpt "export default props type"
+	type ${1:Component}Props = {
+		${2}:${3:string}
+	}
+
+	export default ${1}Props
+
+snippet edch "export default custom hooks"
+	const use${1:Something} = (${2:arg1}: ${3:string}): [${4:something}, ${5:{loading: boolean}}] => {
+		$6
+	}
+
+	export default use${1}
