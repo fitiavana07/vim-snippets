@@ -236,7 +236,7 @@ snippet qsa
 snippet de
 	debugger;
 snippet cl "console.log"
-	console.log(${0});
+	console.log(${0})
 snippet cd "console.debug"
 	console.debug(${0});
 snippet ce "console.error"
@@ -395,3 +395,14 @@ snippet cgqlm "const gql mutation"
 			}
 		}
 	\`
+
+snippet rnedss "react-native stylesheet"
+	const ${1}Styles = StyleSheet.create({
+	  $2
+	})
+	export default ${1}Styles
+
+snippet edc "export default const"
+	const $1 = $2
+
+	export default $1
