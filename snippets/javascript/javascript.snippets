@@ -359,7 +359,7 @@ snippet aw "await"
 	await ${0:${VISUAL}}
 
 snippet use "use hook"
-	const ${1:} = use${2:Hook}(${3})
+	const ${2:} = use${1:Hook}(${3})
 
 snippet cgqlq "const gql query"
 	const GET_${1:GET_THINGS} = gql\`
@@ -406,3 +406,6 @@ snippet edc "export default const"
 	const $1 = $2
 
 	export default $1
+
+snippet rt "return"
+	return $1

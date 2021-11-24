@@ -1,15 +1,24 @@
 extends typescript
 
 # Functional Component
-snippet fc new FC
+snippet edfc export default FC
 	import React from 'react'
 
-	const ${1:Component}: React.FC = () => {
+	const ${1:Component}: React.FC = (${2}) => {
 		return (
-			<${2:rootComponent}>
-				${3}
-			</${2}>
+			<${3:rootComponent}>
+				${4}
+			</${3}>
 		)
 	}
 
 	export default ${1}
+
+snippet fc FC
+	const ${1:Component}: React.FC = (${2}) => {
+		return (
+			<${3:rootComponent}>
+				${4}
+			</${3}>
+		)
+	}

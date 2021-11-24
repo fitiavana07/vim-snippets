@@ -82,3 +82,15 @@ snippet edch "export default custom hooks"
 	}
 
 	export default use${1}
+
+snippet edtc "export default typed const"
+	const $1 : $2 = $3
+
+	export default $1
+
+snippet edta "export default typed async"
+	const $1 : $2 = async($3) => {
+	  $4
+	}
+
+	export default $1
